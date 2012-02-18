@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Button android:id="@+id/forwardButton"
+        android:layout_width="@dimen/control_button_width"
+        android:layout_height="@dimen/control_button_height"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/forward" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button android:id="@+id/leftButton"
+            android:layout_width="@dimen/control_button_width"
+            android:layout_height="@dimen/control_button_height"
+            android:layout_alignParentLeft="true"
+            android:text="@string/left" />
+
+        <Button android:id="@+id/rightButton"
+            android:layout_width="@dimen/control_button_width"
+            android:layout_height="@dimen/control_button_height"
+            android:layout_alignParentRight="true"
+            android:text="@string/right" />
+    </RelativeLayout>
+
+    <Button android:id="@+id/backwardButton"
+        android:layout_width="@dimen/control_button_width"
+        android:layout_height="@dimen/control_button_height"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/backward" />
+    
+    <Button android:id="@+id/startButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/start" />
+    
+    <Button android:id="@+id/bindButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/bind" />
+    
+    <Button android:id="@+id/connectButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/connect" />
+
+</LinearLayout>

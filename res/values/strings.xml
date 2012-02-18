@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="forward">Forward</string>
+    <string name="backward">Backward</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="connect">Connect</string>
+    <string name="start">Start</string>
+    <string name="bind">Bind</string>
+    <string name="disconnect">Disconnect</string>
+            
+    <string name="app_name">DroidNXTRemote</string>
+
+</resources>
