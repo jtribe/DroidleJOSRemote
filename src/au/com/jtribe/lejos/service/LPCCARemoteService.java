@@ -201,20 +201,20 @@ public class LPCCARemoteService extends Service {
 		// @Override
 		public void left() throws RemoteException {
 			if (myNXTCommBluecove != null && myNXTCommBluecove.isOpened()) {
-				// Motor.A.backward();
-				// Motor.B.forward();
-				Motor.A.rotate(-count, true);
-				Motor.B.rotate(count, true);
+				Motor.A.backward();
+				Motor.B.forward();
+				//Motor.A.rotate(-count, true);
+				//Motor.B.rotate(count, true);
 			}
 		}
 
 		// @Override
 		public void right() throws RemoteException {
 			if (myNXTCommBluecove != null && myNXTCommBluecove.isOpened()) {
-				// Motor.A.forward();
-				// Motor.B.backward();
-				Motor.A.rotate(count, true);
-				Motor.B.rotate(-count, true);
+				Motor.A.forward();
+				Motor.B.backward();
+				//Motor.A.rotate(count, true);
+				//Motor.B.rotate(-count, true);
 			}
 		}
 
@@ -229,10 +229,10 @@ public class LPCCARemoteService extends Service {
 		// @Override
 		public void backward() throws RemoteException {
 			if (myNXTCommBluecove != null && myNXTCommBluecove.isOpened()) {
-				// Motor.A.backward();
-				// Motor.B.backward();
-				Motor.A.rotate(-count, true);
-				Motor.B.rotate(-count, true);
+				Motor.A.backward();
+				Motor.B.backward();
+				//Motor.A.rotate(-count, true);
+				//Motor.B.rotate(-count, true);
 			}
 		}
 

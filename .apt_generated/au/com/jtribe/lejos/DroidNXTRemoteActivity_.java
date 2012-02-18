@@ -11,8 +11,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import au.com.jtribe.lejos.R.id;
@@ -37,17 +39,17 @@ public final class DroidNXTRemoteActivity_
     }
 
     private void afterSetContentView_() {
+        bindButton = ((Button) findViewById(id.bindButton));
         startButton = ((Button) findViewById(id.startButton));
         connectButton = ((Button) findViewById(id.connectButton));
-        bindButton = ((Button) findViewById(id.bindButton));
         {
-            View view = findViewById(id.leftButton);
+            View view = findViewById(id.connectButton);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     public void onClick(View view) {
-                        leftButtonPressed();
+                        connectButtonPressed();
                     }
 
                 }
@@ -69,48 +71,6 @@ public final class DroidNXTRemoteActivity_
             }
         }
         {
-            View view = findViewById(id.forwardButton);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        forwardButtonPressed();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.rightButton);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        rightButtonPressed();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.connectButton);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        connectButtonPressed();
-                    }
-
-                }
-                );
-            }
-        }
-        {
             View view = findViewById(id.bindButton);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -125,13 +85,59 @@ public final class DroidNXTRemoteActivity_
             }
         }
         {
+            View view = findViewById(id.rightButton);
+            if (view!= null) {
+                view.setOnTouchListener(new OnTouchListener() {
+
+
+                    public boolean onTouch(View view, MotionEvent event) {
+                        rightButtonPressed(event);
+                        return true;
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.forwardButton);
+            if (view!= null) {
+                view.setOnTouchListener(new OnTouchListener() {
+
+
+                    public boolean onTouch(View view, MotionEvent event) {
+                        forwardButtonPressed(event);
+                        return true;
+                    }
+
+                }
+                );
+            }
+        }
+        {
             View view = findViewById(id.backwardButton);
             if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
+                view.setOnTouchListener(new OnTouchListener() {
 
 
-                    public void onClick(View view) {
-                        backwardButtonPressed();
+                    public boolean onTouch(View view, MotionEvent event) {
+                        backwardButtonPressed(event);
+                        return true;
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.leftButton);
+            if (view!= null) {
+                view.setOnTouchListener(new OnTouchListener() {
+
+
+                    public boolean onTouch(View view, MotionEvent event) {
+                        leftButtonPressed(event);
+                        return true;
                     }
 
                 }
